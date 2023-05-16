@@ -39,17 +39,16 @@ body {
 .refresh {
   margin: 17px auto;
   border-radius: 0%;
-
 }
 
 .list {
   margin-top: 0;
   border: 2px solid #000;
   list-style-type: none;
-  padding-left: 0px;
+  padding-left: 0;
 }
 
-.notVisable{
+.notVisable {
   display: none;
 }
 
