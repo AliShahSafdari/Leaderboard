@@ -9,6 +9,36 @@
  */
 (self["webpackChunkto_do_list"] = self["webpackChunkto_do_list"] || []).push([["bundle"],{
 
+/***/ "./module/add.js":
+/*!***********************!*\
+  !*** ./module/add.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _selector_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./selector.js */ \"./module/selector.js\");\n\r\nconst objSelector = new _selector_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\n\r\nconst addFunction = (e) => {\r\n    e.preventDefault();\r\n    const teamName = document.querySelector('.teamName').value;\r\n    const teamScore = document.querySelector('.teamScore').value;\r\n    fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/dkdkfkjlkjlkdfklj6fKiMm/scores/', {\r\n        method: 'POST',\r\n        body: JSON.stringify({\r\n            name: teamName,\r\n            score: teamScore,\r\n        }),\r\n        headers: {\r\n            'Content-type': 'application/json; charset=UTF-8',\r\n        },\r\n    })\r\n        .then((response) => response.json())\r\n        .catch((error) => {\r\n            throw new Error(`ErrorMessage : ${error}`);\r\n        });\r\n    objSelector.jsForm.reset();\r\n}\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addFunction);\n\n//# sourceURL=webpack://to-do-list/./module/add.js?");
+
+/***/ }),
+
+/***/ "./module/reload.js":
+/*!**************************!*\
+  !*** ./module/reload.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _selector_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./selector.js */ \"./module/selector.js\");\n\r\n\r\nconst objSelector = new _selector_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]();\r\n\r\nconst displayScores = () => {\r\n\r\n    const gitData = async () => {\r\n        const res = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/dkdkfkjlkjlkdfklj6fKiMm/scores/');\r\n        if (res.status !== 200) {\r\n            throw new Error(`HTTP error! status: ${res.status}`);\r\n        }\r\n        return res.json();\r\n    };\r\n\r\n    gitData().then((data) => {\r\n        objSelector.list.innerHTML = '';\r\n        const items = data.result;\r\n        console.log(data);\r\n        items.forEach((item, i) => {\r\n            if (i < 15) {\r\n                objSelector.list.innerHTML += `<li class=\"item-${(i + 1) % 2 == 0 ? 'odd' : ''}\" >${item.user} : ${item.score}</li>   `;\r\n            }\r\n        });\r\n    });\r\n}\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayScores);\n\n//# sourceURL=webpack://to-do-list/./module/reload.js?");
+
+/***/ }),
+
+/***/ "./module/selector.js":
+/*!****************************!*\
+  !*** ./module/selector.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Selector)\n/* harmony export */ });\nclass Selector {\r\n    jsForm = document.querySelector(\"#js-form\");\r\n    refresh = document.querySelector('.refresh');\r\n    list = document.querySelector('.list');\r\n}\n\n//# sourceURL=webpack://to-do-list/./module/selector.js?");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/style.css":
 /*!*************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/style.css ***!
@@ -115,7 +145,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\r\n// import Leaderbord from '../modules/leaderbord.js';\r\n// import Selector from '../modules/selector.js';\r\n\r\n// const objLeaderbard = new Leaderbord();\r\n// const objSelector = new Selector();\r\n\r\n// window.addEventListener('load', () => {\r\n//     objLeaderbard.dispaly();\r\n//   });\r\n\r\n// objSelector.jsForm.addEventListener('submit', (e) => {\r\n//     objLeaderbard.addTeam(e);\r\n//   });\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _module_reload_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../module/reload.js */ \"./module/reload.js\");\n/* harmony import */ var _module_add_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../module/add.js */ \"./module/add.js\");\n/* harmony import */ var _module_selector_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../module/selector.js */ \"./module/selector.js\");\n\r\n\r\n\r\n\r\n\r\nconst objSelector = new _module_selector_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"]();\r\n\r\nobjSelector.jsForm.addEventListener('submit', (e) => {\r\n    (0,_module_add_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(e)\r\n});\r\nobjSelector.refresh.addEventListener('click', _module_reload_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\r\n\r\nwindow.onload = _module_reload_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"];\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
 
 /***/ })
 

@@ -6,7 +6,7 @@ import Selector from '../module/selector.js';
 const objSelector = new Selector();
 
 objSelector.jsForm.addEventListener('submit', (e) => {
-    addFunction(e)
+  addFunction(e);
 });
 objSelector.refresh.addEventListener('click', displayRanks);
 
