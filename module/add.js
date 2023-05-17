@@ -9,8 +9,8 @@ const addFunction = (e) => {
   fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/dkdkfkjlkjlkdfklj6fKiMm/scores/', {
     method: 'POST',
     body: JSON.stringify({
-      name: teamName,
       score: teamScore,
+      user:teamName,
     }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
