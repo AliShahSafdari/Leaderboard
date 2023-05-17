@@ -10,7 +10,7 @@ const addFunction = (e) => {
     method: 'POST',
     body: JSON.stringify({
       score: teamScore,
-      user:teamName,
+      user: teamName,
     }),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
