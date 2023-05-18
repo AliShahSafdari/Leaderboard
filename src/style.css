@@ -43,8 +43,8 @@ body {
   align-items: center;
 }
 
-h3{
-  color: rgb(132,140,200);
+h3 {
+  color: rgb(132, 140, 200);
 }
 
 button {
@@ -65,7 +65,7 @@ button {
 
 .refresh:active {
   border: 2px solid rgb(243, 19, 176);
-  background-color:rgb(65, 65, 161);
+  background-color: rgb(65, 65, 161);
   color: #fff;
   width: 90px;
   height: 30px;
@@ -73,6 +73,7 @@ button {
   border-bottom-right-radius: 0%;
   border-top-left-radius: 0%;
 }
+
 .list {
   margin: 0;
   border: 2px solid #75086c;
@@ -109,7 +110,7 @@ input {
   border-top-left-radius: 0%;
 }
 
-.submit:active{
+.submit:active {
   padding: 5px 10px;
   border-radius: 5px;
   border-bottom-left-radius: 0%;
@@ -120,19 +121,16 @@ input {
   .container-all {
     width: 75%;
   }
-
 }
 
 @media (min-width: 800px) {
   .container-all {
     width: 65%;
   }
-
 }
 
 @media (min-width: 900px) {
   .container-all {
     width: 40%;
   }
-
 }
