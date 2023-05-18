@@ -4,7 +4,6 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
 - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -97,9 +96,6 @@ To run the project, execute the following command:
 
 Open index.html using live server extension.
 
-### Deployment
-
-> Coming soon
 
 ## 👥 Authors <a name="getting-started"></a>
 

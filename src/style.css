@@ -6,54 +6,88 @@ body {
 
 .container-all {
   margin: 0 auto;
-  width: 90%;
+  margin-top: 5%;
+  width: 95%;
   max-width: 800px;
+  border: 1px solid rgb(131, 201, 189);
+  border-bottom: 15px solid rgb(131, 201, 189);
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 15px;
 }
 
 .title {
-  margin-left: 10%;
-  margin-bottom: 0;
-  margin-top: 8%;
+  padding-left: 5px;
+  margin-bottom: 5px;
+  color: rgb(132, 142, 226);
 }
 
 .container {
-  margin: 0 12%;
+  margin-left: 5%;
   display: flex;
   flex-direction: row;
   column-gap: 30px;
 }
 
-.head {
-  display: flex;
-  flex-direction: row;
-  column-gap: 10px;
+.display {
+  width: 55%;
 }
 
-.refresh,
-.submit {
-  border: 2px solid black;
+.add {
+  width: 34%;
+}
+
+.head {
+  display: flex;
+  column-gap: 20%;
+  flex-direction: row;
+  align-items: center;
+}
+
+h3 {
+  color: rgb(132, 140, 200);
+}
+
+button {
+  border: 2px solid rgb(243, 19, 176);
+  color: rgb(65, 65, 161);
+  border-radius: 5px;
   background-color: white;
   box-shadow: 2px 3px black;
+  cursor: pointer;
 }
 
 .refresh {
-  margin: 17px auto;
-  border-radius: 0%;
+  width: 90px;
+  height: 30px;
+  border-bottom-left-radius: 0%;
+  border-top-right-radius: 0%;
+}
+
+.refresh:active {
+  border: 2px solid rgb(243, 19, 176);
+  background-color: rgb(65, 65, 161);
+  color: #fff;
+  width: 90px;
+  height: 30px;
+  border-radius: 5px;
+  border-bottom-right-radius: 0%;
+  border-top-left-radius: 0%;
 }
 
 .list {
-  margin-top: 0;
-  border: 2px solid #000;
+  margin: 0;
+  border: 2px solid #75086c;
+  border-radius: 5px;
   list-style-type: none;
   padding-left: 0;
-}
-
-.notVisable {
-  display: none;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .list li {
-  margin: 4px;
+  padding: 4px;
+  color: #2a6b2a;
 }
 
 .item-odd {
@@ -68,5 +102,38 @@ form {
 }
 
 input {
-  border: 1px solid black;
+  border: 1px solid rgb(91, 157, 184);
+  width: 95%;
+  cursor: pointer;
+}
+
+.submit {
+  padding: 5px 10px;
+  border-bottom-right-radius: 0%;
+  border-top-left-radius: 0%;
+}
+
+.submit:active {
+  padding: 5px 10px;
+  border-radius: 5px;
+  border-bottom-left-radius: 0%;
+  border-top-right-radius: 0%;
+}
+
+@media (min-width: 600px) {
+  .container-all {
+    width: 75%;
+  }
+}
+
+@media (min-width: 800px) {
+  .container-all {
+    width: 65%;
+  }
+}
+
+@media (min-width: 900px) {
+  .container-all {
+    width: 40%;
+  }
 }
