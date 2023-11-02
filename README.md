@@ -55,7 +55,7 @@
 -  This project just make UI
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-- [Live Demo Link](Coming soon)
+//- [Live Demo Link](Coming soon)
 
 
 ## 💻 Getting Started <a name="getting-started"></a>
